@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akasha Nadeel Portfolio</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_contact.css">
+</head>
+
+<body>
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+            }
+        })();
+    </script>
+
+    <!-- Loader -->
+    <div id="loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <p class="loader-text">Loading Portfolio...</p>
+        </div>
+    </div>
+
+
+    <div class="perspective-container">
+        <nav class="navbar">
+            <div class="logo-container">
+                <a href="#home" class="logo">
+                    <span class="logo-char">A</span><span class="logo-char">N</span><span class="logo-dot">.</span>
+                </a>
+            </div>
+
+
+
+            <div class="nav-btn-container">
+                <a href="#services" class="cv-btn"><span>My Services</span></a>
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <header id="home" class="hero-section">
+            <div class="bg-text-container">
+                <div class="typing-box">
+                    <h1 class="hero-name">
+                        <span class="line-1">Akasha</span>
+                        <span class="line-2">Nadeel</span>
+                    </h1>
+                    <div class="hero-roles">
+                        Software Engineer | Web Designer<br>| Web Developer
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-grid">
+                <div class="col-left">
+                    <ul class="main-social">
+                        <li><a href="#"><i class="fab fa-facebook-f icon"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin-in icon"></i></a></li>
+                        <li><a href="#"><i class="fab fa-google-plus-g icon"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="col-center"></div>
+
+                <div class="col-right">
+                    <div class="content-anim-wrapper">
+                        <div class="content__container">
+                            <p class="content__container__text">I am a</p>
+                            <ul class="content__container__list">
+                                <li class="content__container__list__item">Developer!</li>
+                                <li class="content__container__list__item">Designer!</li>
+                                <li class="content__container__list__item">Creator!</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="cta-group">
+                        <a href="#projects" class="btn btn-primary">Projects</a>
+                        <a href="#contact" class="btn btn-light">ContactMe</a>
+                    </div>
+
+                    <div class="stats">
+                        <div class="stat-item">
+                            <p><strong>2+</strong><br> years of Experience</p>
+                        </div>
+                        <div class="stat-item">
+                            <p><strong>50+</strong><br> Submitted Projects</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+
+        <!-- About Section (Redesign) -->
+        <!-- About Section (Bento Style Redesign) -->
+        <section id="about" class="about-section animate-on-scroll">
+            <div class="about-bento-container">
+                <!-- Left Column: Profile Card -->
+                <div class="about-card profile-card">
+                    <div class="profile-image-wrapper">
+                        <img src="profile-light.png" alt="Akasha Nadeel" class="profile-img light-img">
+                        <img src="profile-dark.png" alt="Akasha Nadeel" class="profile-img dark-img"
+                            style="display: none;">
+                    </div>
+
+                    <h3 class="profile-name">Akasha Nadeel</h3>
+                    <p class="profile-email">Kha.akashanadeel@gmail.com</p>
+                    <a href="Akasha_Nadeel_CV.png" download class="btn btn-primary download-cv-btn">Download CV <i
+                            class="fa-solid fa-arrow-down"></i></a>
+                </div>
+
+                <!-- Right Column: Bio & Info -->
+                <div class="about-right-col">
+                    <!-- Top: Bio Card -->
+                    <div class="about-card bio-card">
+                        <div class="bio-header">
+                            <h2 class="bio-title">About Me</h2>
+                            <span class="status-badge"><i class="fas fa-check-circle"></i> Open to work</span>
+                        </div>
+                        <p class="bio-text">
+                            Visual Designer with 2+ years of experience. I'm all about crafting user-friendly interfaces
+                            that are functional and visually compelling.
+                        </p>
+                        <p class="bio-text">
+                            Born and raised in the digital world. When I'm not busy designing, you'll likely find me
+                            exploring new tech, gaming, or cooking some mouthwatering code.
+                        </p>
+                        <!-- Decorative Circle Text -->
+                        <div class="circle-text-badge">
+                            <svg viewBox="0 0 100 100" width="100" height="100">
+                                <defs>
+                                    <path id="circle" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" />
+                                </defs>
+                                <text font-size="12">
+                                    <textPath xlink:href="#circle">
+                                        AKASHA NADEEL • AKASHA NADEEL •
+                                    </textPath>
+                                </text>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Bottom: Roles & Stack Card -->
+                    <div class="about-card stats-card">
+                        <div class="stats-section">
+                            <h4 class="stats-title">Latest Roles</h4>
+                            <div class="role-item">
+                                <div class="role-icon-box" style="background: #E1306C;"><i class="fab fa-instagram"></i>
+                                </div>
+                                <div class="role-details">
+                                    <span class="role-name">UI Designer</span>
+                                    <span class="role-company">Freelance</span>
+                                </div>
+                            </div>
+                            <div class="role-item">
+                                <div class="role-icon-box" style="background: #000;"><i class="fas fa-terminal"></i>
+                                </div>
+                                <div class="role-details">
+                                    <span class="role-name">Software Engineer</span>
+                                    <span class="role-company">Tech Corp</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stack-section">
+                            <h4 class="stats-title">Main Apps</h4>
+                            <div class="stack-icons-row">
+                                <i class="fab fa-figma" title="Figma"></i>
+                                <i class="fab fa-sketch" title="Sketch"></i>
+                                <i class="fab fa-react" title="React"></i>
+                                <i class="fas fa-code" title="Code"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <!-- Services Section -->
+        <section id="services" class="services-section animate-on-scroll">
+            <h2 class="section-title-custom scroll-move-right">My
+                <span class="title-highlight">Services</span>
+            </h2>
+
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="service-title">Web Development</h3>
+                    <p class="service-desc">
+                        Building fast, responsive, and scalable websites using modern technologies like React, Node.js,
+                        and
+                        Next.js.
+                    </p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3 class="service-title">UI/UX Design</h3>
+                    <p class="service-desc">
+                        Creating intuitive, pixel-perfect, and accessible user interfaces that provide seamless digital
+                        experiences.
+                    </p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="service-title">Mobile Apps</h3>
+                    <p class="service-desc">
+                        Developing cross-platform mobile applications for both iOS and Android using Flutter and React
+                        Native.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Browser Mockup Works Section -->
+        <section class="browser-works-section animate-on-scroll">
+            <h2 class="section-title-custom scroll-move-right">Latest
+                <span class="title-highlight">Deployments</span>
+            </h2>
+
+            <div class="browser-grid">
+                <!-- Project 1: Mango Ice Cream -->
+                <div class="browser-card reveal-up delay-100">
+                    <div class="browser-header">
+                        <span class="browser-dot dot-red"></span>
+                        <span class="browser-dot dot-yellow"></span>
+                        <span class="browser-dot dot-green"></span>
+                    </div>
+                    <div class="browser-content">
+                        <img src="mango-project-new.png" alt="Mango Ice Cream" class="browser-img">
+                    </div>
+                    <div style="padding: 25px;">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 10px;">Mango Ice Creams</h3>
+                        <p style="opacity: 0.7;">A vibrant, mouth-watering landing page design for a premium dessert
+                            brand.
+                            Features dynamic scroll interactions and a summer-inspired color palette to drive
+                            conversions.
+                        </p>
+                        <button class="view-full-btn" onclick="openModal('mango-project-new.png')">View Design</button>
+                    </div>
+                </div>
+
+                <!-- Project 2: Calculator UI -->
+                <div class="browser-card reveal-up delay-200">
+                    <div class="browser-header">
+                        <span class="browser-dot dot-red"></span>
+                        <span class="browser-dot dot-yellow"></span>
+                        <span class="browser-dot dot-green"></span>
+                    </div>
+                    <div class="browser-content">
+                        <img src="calculator-ui-new.png" alt="Calculator UI Design" class="browser-img">
+                    </div>
+                    <div style="padding: 25px;">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 10px;">Modern Calculator UI</h3>
+                        <p style="opacity: 0.7;">A sleek, dark-mode focused calculator interface designed in Figma.
+                            Prioritizes accessibility, clear visual hierarchy, and a satisfying tactile feel for
+                            buttons.
+                        </p>
+                        <button class="view-full-btn" onclick="openModal('calculator-ui-new.png')">View Design</button>
+                    </div>
+                </div>
+
+                <!-- Project 3: Zing Juice Brand -->
+                <div class="browser-card reveal-up delay-300">
+                    <div class="browser-header">
+                        <span class="browser-dot dot-red"></span>
+                        <span class="browser-dot dot-yellow"></span>
+                        <span class="browser-dot dot-green"></span>
+                    </div>
+                    <div class="browser-content">
+                        <img src="zing-project.png" alt="Zing Juice Brand" class="browser-img">
+                    </div>
+                    <div style="padding: 25px;">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 10px;">Zing Fresh Juice</h3>
+                        <p style="opacity: 0.7;">An energetic and bold landing page for an organic drink startup. Uses
+                            large
+                            typography and 3D product renders to create an immersive, thirst-quenching user experience.
+                        </p>
+                        <button class="view-full-btn" onclick="openModal('zing-project.png')">View Design</button>
+                    </div>
+                </div>
+
+                <!-- Project 4: Blueberry Juice UI -->
+                <div class="browser-card reveal-up delay-400">
+                    <div class="browser-header">
+                        <span class="browser-dot dot-red"></span>
+                        <span class="browser-dot dot-yellow"></span>
+                        <span class="browser-dot dot-green"></span>
+                    </div>
+                    <div class="browser-content">
+                        <img src="blueberry-project-new.png" alt="Blueberry Juice UI" class="browser-img">
+                    </div>
+                    <div style="padding: 25px;">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 10px;">Blueberry Delight UI</h3>
+                        <p style="opacity: 0.7;">A premium, dark-themed product concept. "Sip into Freshness" with
+                            deep
+                            purple visuals and floating elements that evoke a sense of luxury and taste.</p>
+                        <button class="view-full-btn" onclick="openModal('blueberry-project-new.png')">View
+                            Design</button>
+                    </div>
+                </div>
+
+                <!-- Hidden Project 1 (Duplicate for Demo) -->
+                <div class="browser-card reveal-up delay-100 hidden-project">
+                    <div class="browser-header">
+                        <span class="browser-dot dot-red"></span>
+                        <span class="browser-dot dot-yellow"></span>
+                        <span class="browser-dot dot-green"></span>
+                    </div>
+                    <div class="browser-content">
+                        <img src="ecommerce-landscape.png" alt="Fashion Store" class="browser-img">
+                    </div>
+                    <div style="padding: 25px;">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 10px;">Fashion Store</h3>
+                        <p style="opacity: 0.7;">A minimalist eCommerce conceptual design focusing on high-quality
+                            imagery and clean typography.</p>
+                        <button class="view-full-btn" onclick="openModal('ecommerce-landscape.png')">View
+                            Design</button>
+                    </div>
+                </div>
+
+                <!-- Hidden Project 2 (Duplicate for Demo) -->
+                <div class="browser-card reveal-up delay-200 hidden-project">
+                    <div class="browser-header">
+                        <span class="browser-dot dot-red"></span>
+                        <span class="browser-dot dot-yellow"></span>
+                        <span class="browser-dot dot-green"></span>
+                    </div>
+                    <div class="browser-content">
+                        <img src="fintech-landscape.png" alt="Fintech Dashboard" class="browser-img">
+                    </div>
+                    <div style="padding: 25px;">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 10px;">Fintech Dashboard</h3>
+                        <p style="opacity: 0.7;">Complex data visualization made simple. A dashboard layout that
+                            prioritizes financial clarity.</p>
+                        <button class="view-full-btn" onclick="openModal('fintech-landscape.png')">View Design</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="browser-btn-container">
+                <button class="see-more-btn" onclick="toggleProjects()">Show More</button>
+            </div>
+        </section>
+
+        <!-- Huge Image Slider Section -->
+        <section class="slider-section animate-on-scroll">
+            <h2 class="section-title-custom scroll-move-right">Featured
+                <span class="title-highlight">Case Studies</span>
+            </h2>
+
+            <div class="slider-container">
+                <div class="slider-wrapper">
+
+                    <!-- Slide 1: Pandora Style (Pink/Beige) -->
+                    <div class="slide-item slide-1">
+                        <button class="slide-pause-btn" onclick="toggleSlidePlay(this)" title="Pause Autoplay">
+                            <i class="fas fa-pause"></i>
+                        </button>
+                        <div class="slide-content">
+                            <div class="slide-label">E-Commerce</div>
+                            <h2 class="slide-title">Global Product Experience</h2>
+                            <p class="slide-desc">
+                                Design direction leading the future of e-commerce shopping experiences.
+                                Includes product landing pages, cart flows, and checkout optimization.
+                            </p>
+                            <a href="#" class="btn btn-primary"
+                                style="background: #000; color: #fff; padding: 15px 35px;">View Case Study</a>
+                        </div>
+                        <div class="slide-visual" style="opacity: 0;"> <!-- Hidden to show background -->
+                            <img src="ecommerce-case-study.png" alt="Mockup" class="mockup-img">
+                        </div>
+                    </div>
+
+                    <!-- Slide 2: Mobile App (Blue/Cyan) -->
+                    <div class="slide-item slide-2">
+                        <button class="slide-pause-btn" onclick="toggleSlidePlay(this)" title="Pause Autoplay">
+                            <i class="fas fa-pause"></i>
+                        </button>
+                        <div class="slide-content">
+                            <div class="slide-label">Fintech App</div>
+                            <h2 class="slide-title">Smart Banking for Everyone</h2>
+                            <p class="slide-desc">
+                                A complete overhaul of the mobile banking experience, focusing on accessibility,
+                                speed, and financial clarity for over 2 million users.
+                            </p>
+                            <a href="#" class="btn btn-primary"
+                                style="background: #000; color: #fff; padding: 15px 35px;">View Case Study</a>
+                        </div>
+                        <div class="slide-visual" style="opacity: 0;">
+                            <img src="fintech-case-study.png" alt="Mockup" class="mockup-img">
+                        </div>
+                    </div>
+
+                    <!-- Slide 3: Dashboard (Purple) -->
+                    <div class="slide-item slide-3">
+                        <button class="slide-pause-btn" onclick="toggleSlidePlay(this)" title="Pause Autoplay">
+                            <i class="fas fa-pause"></i>
+                        </button>
+                        <div class="slide-content">
+                            <div class="slide-label">SaaS Platform</div>
+                            <h2 class="slide-title">Analytics Dashboard Redesign</h2>
+                            <p class="slide-desc">
+                                Simplifying complex data visualization into an intuitive dashboard
+                                that empowers users to make data-driven decisions instantly.
+                            </p>
+                            <a href="#" class="btn btn-primary"
+                                style="background: #fff; color: #000; padding: 15px 35px;">View Case Study</a>
+                        </div>
+                        <div class="slide-visual" style="opacity: 0;">
+                            <img src="analytics-case-study.png" alt="Mockup" class="mockup-img">
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Navigation -->
+                <div class="slider-nav">
+                    <button class="nav-btn prev-btn"><i class="fas fa-arrow-left"></i></button>
+                    <button class="nav-btn next-btn"><i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section (Bento Grid Redesign) -->
+        <section id="projects" class="bento-section animate-on-scroll">
+            <h2 class="section-title-custom scroll-move-right">Selected
+                <span class="title-highlight">Works</span>
+            </h2>
+
+            <div class="bento-grid">
+                <!-- Card 1: Tall Dark (Left) - "System Architecture" -->
+                <div class="bento-card row-span-2 bento-dark reveal-up delay-100"
+                    style="background: linear-gradient(rgba(0, 0, 0, 0.311), rgba(0, 0, 0, 0.5)), url('forex-trading-setup-vacant-office.jpg') center/cover no-repeat;">
+                    <div class="bento-content">
+                        <div class="bento-subtitle">Development</div>
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                            <h3 class="bento-title" style="margin-bottom: 0;">System Architecture</h3>
+                            <img src="https://cdn-icons-png.flaticon.com/512/2083/2083213.png" alt="Icon"
+                                style="width: 40px; opacity: 0.8; filter: invert(1);">
+                        </div>
+                        <p class="bento-desc">Building scalable, robust backends for high-traffic applications.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2: Wide Radiant Gradient (Top Right) - "Immersive Web" -->
+                <div class="bento-card span-2 bento-gradient-1 reveal-left delay-200"
+                    style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('immersive_web.jpg') center top/cover no-repeat;">
+                    <!-- Using CSS Pattern or Gradient instead of external image for reliability -->
+                    <div class="bento-content">
+                        <div
+                            style="background: rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 4px; display: inline-block; font-size: 10px; font-weight: 700; margin-bottom: 10px;">
+                            FEATURED</div>
+                        <h3 class="bento-title" style="color: #FFD41D;">Immersive Web Experiences</h3>
+                        <p class="bento-desc">Pushing the boundaries of browser performance with WebGL and React Three
+                            Fiber.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3: Small White (Middle) - Tech Stack -->
+                <div class="bento-card reveal-up delay-300">
+                    <div class="bento-tech-grid">
+                        <i class="fab fa-react" title="React"></i>
+                        <i class="fab fa-node-js" title="Node.js"></i>
+                        <i class="fab fa-python" title="Python"></i>
+                        <i class="fab fa-aws" title="AWS"></i>
+                        <i class="fab fa-docker" title="Docker"></i>
+                        <i class="fab fa-git-alt" title="Git"></i>
+                    </div>
+                </div>
+
+                <!-- Card 4: Green/Dark Gradient (Middle Right) - "Mobile Apps" -->
+                <div class="bento-card reveal-right delay-300"
+                    style="background: url('flutter_dev.jpg') center/cover no-repeat;">
+                    <div class="bento-content">
+                        <div class="bento-subtitle" style="color: #444;">Mobile</div>
+                        <h3 class="bento-title" style="color: #000;">Flutter Development</h3>
+                        <p class="bento-desc" style="color: #333;">Cross-platform apps that feel native.</p>
+                        <div style="margin-top: 15px; font-weight: 700; font-size: 0.9rem; color: #000;">VIEW APPS
+                            &rarr;
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5: Wide Image/Dark (Bottom) - "UI/UX Design" -->
+                <div class="bento-card span-2 bento-gradient-3 reveal-up delay-400"
+                    style="background: url('modern_design_system.png') center/cover no-repeat; flex-direction: row; align-items: center; gap: 20px;">
+                    <div class="bento-content" style="flex: 1;">
+                        <h3 class="bento-title" style="color: #FE7F2D;">Modern Design Systems</h3>
+                        <p class="bento-desc" style="color: #333;">Creating consistent, accessible, and beautiful
+                            component
+                            libraries.</p>
+                    </div>
+                </div>
+
+                <!-- Card 6: Standard (Bottom Right) - Contact/Hire -->
+                <div class="bento-card bento-dark reveal-scale delay-400"
+                    style="justify-content: center; text-align: center; background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('lets_work_together.jpg') center/cover no-repeat;">
+                    <h3 class="bento-title">Let's Work Together</h3>
+                    <a href="#contact" class="btn btn-primary"
+                        style="margin-top: 10px; background: #FFD41D; color: #000; border: none; padding: 12px 15px !important; width: auto !important; min-width: 0 !important;">Contact
+                        Me</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Get In Touch Section -->
+        <section id="contact" class="get-in-touch-section animate-on-scroll">
+            <div class="get-in-touch-content">
+                <h2 class="section-title-custom">Let's <span class="title-highlight">Connect</span>
+                </h2>
+                <p class="get-in-touch-sub">
+                    I'm currently looking for new opportunities. Whether you have a question or just want to say hi,
+                    I'll try my best to get back to you!
+                </p>
+                <a href="#" class="btn btn-primary" onclick="openContactModal(event)"
+                    style="font-size: 1.2rem; padding: 18px 50px;">Say Hello <i class="fas fa-paper-plane"
+                        style="margin-left: 10px;"></i></a>
+            </div>
+        </section>
+
+        <footer class="main-footer">
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p class="copyright">&copy; 2026 Akasha Nadeel. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+
+    <div id="imageModal" class="image-modal">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+
+    <!-- Contact Form Modal -->
+    <div id="contactModal" class="contact-modal">
+        <div class="contact-modal-content">
+            <span class="contact-close" onclick="closeContactModal()">&times;</span>
+            <h2 class="contact-title">Get in Touch</h2>
+            <!-- 
+                To enable automatic sending:
+                1. Go to https://formspree.io/ and create a free account.
+                2. Create a form and copy your "Form Endpoint" (URL).
+                3. Paste it inside the action="" quotes below.
+            -->
+            <form class="contact-form" action="https://formspree.io/f/xykkyovd" method="POST">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Custom Confirmation Modal -->
+    <div id="cv-modal" class="custom-modal">
+        <div class="custom-modal-content">
+            <h3>Download CV</h3>
+            <p>You are about to download the official CV of Akasha Nadeel.</p>
+            <p>Do you wish to proceed?</p>
+            <div class="modal-buttons">
+                <button id="confirm-yes" class="btn btn-primary modal-btn">Yes</button>
+                <button id="confirm-no" class="btn btn-secondary modal-btn">No</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Thank You Modal -->
+    <div id="thank-you-modal" class="custom-modal">
+        <div class="custom-modal-content success-content">
+            <div class="success-icon-container">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Message Sent!</h3>
+            <p>Thanks for reaching out! I'll get back to you soon.</p>
+            <button onclick="closeThankYouModal()" class="btn btn-primary modal-btn"
+                style="min-width: 150px;">Awesome</button>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

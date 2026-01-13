@@ -1,0 +1,236 @@
+/* --- Sticky Scroll & Showcase Section --- */
+.showcase-wrapper {
+    background: #000;
+    color: #fff;
+    width: 100%;
+    position: relative;
+    /* Wrapper ensures stacking context */
+}
+
+/* Sticky Text Sections */
+.sticky-text-section {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-content: center;
+    position: sticky;
+    top: 0;
+    background: #0f172a;
+    /* slate-950 equivalent */
+    color: #fff;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.sticky-text-section:nth-child(2) {
+    background: #d1d5db;
+    /* gray-300 */
+    color: #000;
+    border-radius: 20px 20px 0 0;
+}
+
+.sticky-text-section:nth-child(3) {
+    background: #0f172a;
+    color: #fff;
+}
+
+/* Background Grid Pattern Overlay */
+.bg-grid-pattern {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(to right, rgba(79, 79, 79, 0.18) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(79, 79, 79, 0.18) 1px, transparent 1px);
+    background-size: 54px 54px;
+    mask-image: radial-gradient(ellipse 60% 50% at 50% 0%, #000 70%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse 60% 50% at 50% 0%, #000 70%, transparent 100%);
+    pointer-events: none;
+}
+
+.sticky-headline {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.2;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+
+/* --- Sticky Image Stacking Section --- */
+.sticky-image-section {
+    background: #0f172a;
+    color: #fff;
+    min-height: 200vh;
+    /* Allow enough scroll space */
+    position: relative;
+}
+
+.sticky-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.sticky-left-col {
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sticky-right-col-images {
+    display: grid;
+    gap: 80px;
+    padding: 100px 0;
+}
+
+.skew-image-wrapper {
+    display: grid;
+    place-content: center;
+    transition: transform 0.3s ease;
+}
+
+.skew-left {
+    transform: skewX(-12deg);
+}
+
+.skew-right {
+    transform: skewX(12deg);
+}
+
+.skew-img {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    transition: all 0.5s ease;
+}
+
+.skew-image-wrapper:hover .skew-img {
+    transform: scale(1.05);
+    box-shadow: 0 30px 60px rgba(71, 165, 255, 0.3);
+}
+
+
+/* --- Stacked Card Section (Copied & Paste) --- */
+.stacked-cards-section {
+    background: #0f172a;
+    color: #fff;
+    padding-bottom: 100px;
+}
+
+.stacked-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.stacked-left-images {
+    display: grid;
+    gap: 20px;
+    position: relative;
+}
+
+.stack-img-container {
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    display: grid;
+    place-content: center;
+}
+
+.stack-img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.stacked-right-text {
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    display: grid;
+    place-content: center;
+}
+
+.stacked-headline {
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: right;
+    line-height: 1.3;
+}
+
+/* Footer mimicking the example */
+.showcase-footer {
+    background: #0f172a;
+    color: #fff;
+    padding-bottom: 50px;
+}
+
+.footer-huge-text {
+    font-size: 14vw;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #9ca3af, #1f2937);
+    -webkit-background-clip: text;
+    color: transparent;
+    line-height: 1;
+    transition: transform 0.3s;
+}
+
+.footer-huge-text:hover {
+    transform: translateY(20px);
+}
+
+.footer-sub {
+    background: #000;
+    height: 200px;
+    display: grid;
+    place-content: center;
+    font-size: 1.5rem;
+    border-radius: 100% 100% 0 0;
+    margin-top: -50px;
+    position: relative;
+    z-index: 10;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+
+    .sticky-content-grid,
+    .stacked-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sticky-left-col,
+    .stacked-right-text {
+        height: auto;
+        position: relative;
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .stacked-headline {
+        text-align: center;
+    }
+
+    .sticky-right-col-images {
+        gap: 40px;
+    }
+
+    .stack-img-container {
+        height: 60vh;
+        top: 10vh;
+    }
+}
