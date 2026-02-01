@@ -1,0 +1,256 @@
+/* 3D Services Slider Styles - Matches User's Design */
+
+/* Section Container */
+.services-3d-section {
+    padding: 80px 20px;
+    position: relative;
+    overflow: hidden;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.services-header-row {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 15px;
+    position: relative;
+}
+
+body.dark-mode .services-header-row {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.service-counter {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-blue);
+    opacity: 0.7;
+    position: absolute;
+    right: 0;
+    bottom: 15px;
+}
+
+/* Slider Main Container */
+.s3d-container {
+    padding-top: 20px;
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    /* Wide enough for 3 cards */
+    height: 430px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+}
+
+/* Navigation Buttons */
+.s3d-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--text-blue);
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #fff;
+    z-index: 50;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body.dark-mode .s3d-nav-btn {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.s3d-nav-btn:hover {
+    transform: translateY(-50%) scale(1.1);
+    background: #fff;
+    color: var(--text-blue);
+}
+
+.s3d-nav-btn.prev-btn-3d {
+    left: calc(50% - 460px);
+}
+
+.s3d-nav-btn.next-btn-3d {
+    right: calc(50% - 460px);
+}
+
+/* Wrapper for Items */
+.s3d-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d;
+}
+
+/* Individual Card */
+.s3d-item {
+    position: absolute;
+    width: 280px;
+    height: 360px;
+    border-radius: 30px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: flex-end;
+    padding: 30px;
+    overflow: hidden;
+    /* overlay */
+}
+
+/* Dark Overlay on Images */
+.s3d-item::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent 60%);
+    z-index: 1;
+}
+
+/* Content inside Card */
+.s3d-content {
+    position: relative;
+    z-index: 2;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.4s ease 0.2s;
+    text-align: center;
+    width: 100%;
+}
+
+.s3d-item.active .s3d-content {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.s3d-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 5px;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Positioning States */
+
+/* Active (Center) */
+.s3d-item.active {
+    z-index: 10;
+    transform: translateX(0) scale(1.1);
+    opacity: 1;
+    filter: blur(0px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* Prev (Left) */
+.s3d-item.prev {
+    z-index: 5;
+    transform: translateX(-200px) scale(0.85);
+    /* Overlap slightly */
+    opacity: 0.6;
+    filter: blur(2px);
+    pointer-events: none;
+}
+
+/* Next (Right) */
+.s3d-item.next {
+    z-index: 5;
+    transform: translateX(200px) scale(0.85);
+    opacity: 0.6;
+    filter: blur(2px);
+    pointer-events: none;
+}
+
+/* Hidden Items */
+.s3d-item.hidden {
+    z-index: 0;
+    transform: translateX(0) scale(0.5);
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Pagination Dots */
+.s3d-dots {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.s3d-dot {
+    width: 30px;
+    height: 6px;
+    background: #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.s3d-dot.active {
+    background: var(--text-blue);
+    width: 50px;
+}
+
+body.dark-mode .s3d-dot {
+    background: #444;
+}
+
+body.dark-mode .s3d-dot.active {
+    background: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .s3d-container {
+        height: 330px;
+    }
+
+    .s3d-item {
+        width: 220px;
+        height: 300px;
+    }
+
+    .s3d-item.prev {
+        transform: translateX(-130px) scale(0.8);
+        filter: blur(3px);
+    }
+
+    .s3d-item.next {
+        transform: translateX(130px) scale(0.8);
+        filter: blur(3px);
+    }
+
+    .s3d-nav-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .s3d-nav-btn.prev-btn-3d {
+        left: 10px;
+    }
+
+    .s3d-nav-btn.next-btn-3d {
+        right: 10px;
+    }
+}

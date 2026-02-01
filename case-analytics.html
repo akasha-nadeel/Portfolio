@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Dashboard - Case Study</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        body.dark-mode {
+            background-color: #0f172a;
+            color: #fff;
+        }
+
+        .cs-hero {
+            height: 60vh;
+            background: url('analytics-case-study.png') center/cover no-repeat;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            padding-bottom: 50px;
+        }
+
+        .cs-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+        }
+
+        .cs-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cs-title {
+            font-size: 3rem;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .cs-back-btn {
+            position: fixed;
+            top: 30px;
+            left: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            padding: 10px 20px;
+            border-radius: 30px;
+            color: #fff;
+            text-decoration: none;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .cs-back-btn:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        .cs-content {
+            background: #fff;
+            border-radius: 20px;
+            padding: 50px;
+            margin-top: -50px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 5;
+        }
+
+        body.dark-mode .cs-content {
+            background: #1e293b;
+            color: #e2e8f0;
+        }
+
+        .cs-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 50px;
+        }
+
+        @media(max-width: 768px) {
+            .cs-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cs-title {
+                font-size: 2rem;
+            }
+        }
+
+        .cs-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #888;
+            margin-bottom: 10px;
+        }
+
+        .cs-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .cs-img-full {
+            width: 100%;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body class="dark-mode">
+    <a href="index.html#featured-case-studies" class="cs-back-btn"><i class="fas fa-arrow-left"></i> Back to
+        Portfolio</a>
+
+    <header class="cs-hero">
+        <div class="cs-container" style="width: 100%;">
+            <div class="cs-label" style="color: #c084fc;">SaaS Platform</div>
+            <h1 class="cs-title">Analytics Dashboard Redesign</h1>
+        </div>
+    </header>
+
+    <main class="cs-container">
+        <div class="cs-content">
+            <div class="cs-grid">
+                <div>
+                    <h3 style="margin-bottom: 15px;">Focus</h3>
+                    <p>Information Architecture</p>
+                    <hr style="border: 0; border-top: 1px solid #333; margin: 20px 0;">
+                    <h3 style="margin-bottom: 15px;">Users</h3>
+                    <p>Enterprise Managers</p>
+                    <hr style="border: 0; border-top: 1px solid #333; margin: 20px 0;">
+                    <h3 style="margin-bottom: 15px;">Metrics</h3>
+                    <p>+300% Engagement</p>
+                </div>
+                <div>
+                    <h2 style="margin-bottom: 20px;">The Overview</h2>
+                    <p class="cs-text">
+                        Enterprise users were overwhelmed by a dashboard that showed 'everything at once'. There was no
+                        hierarchy, and critical alerts were often missed in the noise of data tables.
+                    </p>
+                    <h2 style="margin-bottom: 20px; margin-top: 40px;">The Strategy</h2>
+                    <p class="cs-text">
+                        We redesigned the dashboard around "Actionable Insights". Instead of raw data, we presented
+                        trends and anomalies first. We also introduced a 'Dark Mode' (as seen in the visuals) which
+                        reduced eye strain for analysts working late hours.
+                    </p>
+                </div>
+            </div>
+
+            <img src="analytics-case-study.png" alt="Showcase" class="cs-img-full">
+            <img src="analytics-dashboard-final.png" alt="Process" class="cs-img-full">
+        </div>
+    </main>
+
+    <footer style="text-align: center; padding: 50px; opacity: 0.5;">
+        <p>&copy; 2026 Akasha Nadeel. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Akasha Nadeel Portfolio</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap"
@@ -13,6 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style_contact.css">
+    <link rel="stylesheet" href="style_services_3d.css">
 </head>
 
 <body>
@@ -25,11 +30,23 @@
         })();
     </script>
 
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress-bar"></div>
+
     <!-- Loader -->
     <div id="loader">
-        <div class="loader-content">
-            <div class="loader-spinner"></div>
-            <p class="loader-text">Loading Portfolio...</p>
+        <div class="robot-container">
+            <div class="robot-head">
+                <div class="robot-antenna"></div>
+                <div class="robot-ears"></div>
+                <div class="robot-eyes">
+                    <div class="robot-eye left"></div>
+                    <div class="robot-eye right"></div>
+                </div>
+                <div class="robot-mouth"></div>
+            </div>
+            <div class="robot-shadow"></div>
+            <p class="robot-text">INITIALIZING...</p>
         </div>
     </div>
 
@@ -54,6 +71,10 @@
 
         <!-- Hero Section -->
         <header id="home" class="hero-section">
+            <div class="mobile-hero-wrapper">
+                <img src="hero-image.png" class="mobile-avatar light-mode-img" alt="Akasha Nadeel">
+                <img src="dark-hero-image.png" class="mobile-avatar dark-mode-img" alt="Akasha Nadeel">
+            </div>
             <div class="bg-text-container">
                 <div class="typing-box">
                     <h1 class="hero-name">
@@ -69,9 +90,12 @@
             <div class="content-grid">
                 <div class="col-left">
                     <ul class="main-social">
-                        <li><a href="#"><i class="fab fa-facebook-f icon"></i></a></li>
-                        <li><a href="#"><i class="fab fa-linkedin-in icon"></i></a></li>
-                        <li><a href="#"><i class="fab fa-google-plus-g icon"></i></a></li>
+                        <li><a href="https://www.facebook.com/share/1HdQDG4MnJ/?mibextid=wwXIfr" target="_blank"><i
+                                    class="fab fa-facebook-f icon"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/akasha-nadeel-381930387?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                                target="_blank"><i class="fab fa-linkedin-in icon"></i></a></li>
+                        <li><a href="https://github.com/akasha-nadeel" target="_blank"><i
+                                    class="fab fa-github icon"></i></a></li>
                     </ul>
                 </div>
 
@@ -85,6 +109,7 @@
                                 <li class="content__container__list__item">Developer!</li>
                                 <li class="content__container__list__item">Designer!</li>
                                 <li class="content__container__list__item">Creator!</li>
+                                <li class="content__container__list__item">Developer!</li>
                             </ul>
                         </div>
                     </div>
@@ -96,10 +121,12 @@
 
                     <div class="stats">
                         <div class="stat-item">
-                            <p><strong>2+</strong><br> years of Experience</p>
+                            <p><strong><span class="count-up" data-target="2">0</span>+</strong><br> years of Experience
+                            </p>
                         </div>
                         <div class="stat-item">
-                            <p><strong>50+</strong><br> Submitted Projects</p>
+                            <p><strong><span class="count-up" data-target="50">0</span>+</strong><br> Submitted Projects
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -110,23 +137,57 @@
         <!-- About Section (Redesign) -->
         <!-- About Section (Bento Style Redesign) -->
         <section id="about" class="about-section animate-on-scroll">
+
+            <!-- Modern Tech Marquee -->
+            <div class="modern-tech-marquee" style="margin-bottom: 20px; border-radius: 12px;">
+                <div class="tech-track">
+                    <!-- Set 1 -->
+                    <span class="tech-item"><i class="fab fa-html5" style="color: #e34c26;"></i> HTML</span>
+                    <span class="tech-item"><i class="fab fa-css3-alt" style="color: #264de4;"></i> CSS</span>
+                    <span class="tech-item"><i class="fab fa-js" style="color: #f7df1e;"></i> JavaScript</span>
+                    <span class="tech-item"><i class="fab fa-react" style="color: #61dbfb;"></i> React</span>
+                    <span class="tech-item"><i class="fab fa-figma" style="color: #F24E1E;"></i> Figma</span>
+                    <span class="tech-item"><i class="fas fa-cube" style="color: #ff3366;"></i> Spline</span>
+                    <span class="tech-item"><i class="fab fa-java" style="color: #007396;"></i> Java</span>
+
+                    <!-- Set 2 (Duplicate) -->
+                    <span class="tech-item"><i class="fab fa-html5" style="color: #e34c26;"></i> HTML</span>
+                    <span class="tech-item"><i class="fab fa-css3-alt" style="color: #264de4;"></i> CSS</span>
+                    <span class="tech-item"><i class="fab fa-js" style="color: #f7df1e;"></i> JavaScript</span>
+                    <span class="tech-item"><i class="fab fa-react" style="color: #61dbfb;"></i> React</span>
+                    <span class="tech-item"><i class="fab fa-figma" style="color: #F24E1E;"></i> Figma</span>
+                    <span class="tech-item"><i class="fas fa-cube" style="color: #ff3366;"></i> Spline</span>
+                    <span class="tech-item"><i class="fab fa-java" style="color: #007396;"></i> Java</span>
+
+                    <!-- Set 3 (Extra Safety) -->
+                    <span class="tech-item"><i class="fab fa-html5" style="color: #e34c26;"></i> HTML</span>
+                    <span class="tech-item"><i class="fab fa-css3-alt" style="color: #264de4;"></i> CSS</span>
+                    <span class="tech-item"><i class="fab fa-js" style="color: #f7df1e;"></i> JavaScript</span>
+                    <span class="tech-item"><i class="fab fa-react" style="color: #61dbfb;"></i> React</span>
+                    <span class="tech-item"><i class="fab fa-figma" style="color: #F24E1E;"></i> Figma</span>
+                    <span class="tech-item"><i class="fas fa-cube" style="color: #ff3366;"></i> Spline</span>
+                    <span class="tech-item"><i class="fab fa-java" style="color: #007396;"></i> Java</span>
+                </div>
+            </div>
+
             <div class="about-bento-container">
                 <!-- Left Column: Profile Card -->
                 <div class="about-card profile-card">
                     <div class="profile-image-wrapper">
                         <img src="profile-light.png" alt="Akasha Nadeel" class="profile-img light-img">
-                        <img src="profile-dark.png" alt="Akasha Nadeel" class="profile-img dark-img"
+                        <img src="profile-dark.png?v=2" alt="Akasha Nadeel" class="profile-img dark-img"
                             style="display: none;">
                     </div>
 
                     <h3 class="profile-name">Akasha Nadeel</h3>
                     <p class="profile-email">Kha.akashanadeel@gmail.com</p>
-                    <a href="Akasha_Nadeel_CV.png" download class="btn btn-primary download-cv-btn">Download CV <i
-                            class="fa-solid fa-arrow-down"></i></a>
+                    <a href="Akasha_Nadeel_CV.pdf" download="Akasha_Nadeel_CV.pdf"
+                        class="btn btn-primary download-cv-btn">Download CV <i class="fa-solid fa-arrow-down"></i></a>
                 </div>
 
                 <!-- Right Column: Bio & Info -->
                 <div class="about-right-col">
+
                     <!-- Top: Bio Card -->
                     <div class="about-card bio-card">
                         <div class="bio-header">
@@ -195,13 +256,52 @@
 
 
 
-        <!-- Services Section -->
-        <section id="services" class="services-section animate-on-scroll">
-            <h2 class="section-title-custom scroll-move-right">My
-                <span class="title-highlight">Services</span>
-            </h2>
+        <section id="services" class="services-3d-section animate-on-scroll">
+            <div class="services-header-row">
+                <h2 class="section-title-custom" style="margin: 0;">My <span class="title-highlight">Services</span>
+                </h2>
+                <div class="service-counter">02/03</div>
+            </div>
 
-            <div class="services-grid">
+            <!-- 3D Slider Container -->
+            <div class="s3d-container">
+                <button class="s3d-nav-btn prev-btn-3d"><i class="fas fa-chevron-left"></i></button>
+
+                <div class="s3d-wrapper">
+                    <!-- Item 1: Mobile -->
+                    <div class="s3d-item prev" data-index="0" style="background-image: url('flutter_dev.jpg');">
+                        <div class="s3d-content">
+                            <h3 class="s3d-title">Mobile</h3>
+                            <p style="color: #fff; opacity: 0.9;">Flutter & React Native</p>
+                        </div>
+                    </div>
+                    <!-- Item 2: Web (Active) -->
+                    <div class="s3d-item active" data-index="1" style="background-image: url('immersive_web.jpg');">
+                        <div class="s3d-content">
+                            <h3 class="s3d-title">Web</h3>
+                            <p style="color: #fff; opacity: 0.9;">React, Node & 3D</p>
+                        </div>
+                    </div>
+                    <!-- Item 3: Design -->
+                    <div class="s3d-item next" data-index="2" style="background-image: url('design_slider_bg.png');">
+                        <div class="s3d-content">
+                            <h3 class="s3d-title">Design</h3>
+                            <p style="color: #fff; opacity: 0.9;">UI/UX & Systems</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="s3d-nav-btn next-btn-3d"><i class="fas fa-chevron-right"></i></button>
+            </div>
+
+            <div class="s3d-dots">
+                <span class="s3d-dot" onclick="goToService(0)"></span>
+                <span class="s3d-dot active" onclick="goToService(1)"></span>
+                <span class="s3d-dot" onclick="goToService(2)"></span>
+            </div>
+
+            <!-- Original Services Grid (Descriptions) -->
+            <div class="services-grid" style="margin-top: 60px; width: 100%; max-width: 1200px;">
                 <!-- Service 1 -->
                 <div class="service-card">
                     <div class="service-icon">
@@ -210,8 +310,7 @@
                     <h3 class="service-title">Web Development</h3>
                     <p class="service-desc">
                         Building fast, responsive, and scalable websites using modern technologies like React, Node.js,
-                        and
-                        Next.js.
+                        and Next.js.
                     </p>
                 </div>
 
@@ -259,14 +358,41 @@
                     <div class="browser-content">
                         <img src="mango-project-new.png" alt="Mango Ice Cream" class="browser-img">
                     </div>
-                    <div style="padding: 25px;">
+                    <div style="padding: 20px; display: flex; flex-direction: column; flex: 1;">
                         <h3 style="font-size: 1.5rem; margin-bottom: 10px;">Mango Ice Creams</h3>
                         <p style="opacity: 0.7;">A vibrant, mouth-watering landing page design for a premium dessert
                             brand.
                             Features dynamic scroll interactions and a summer-inspired color palette to drive
                             conversions.
                         </p>
-                        <button class="view-full-btn" onclick="openModal('mango-project-new.png')">View Design</button>
+
+                        <div style="margin-top: auto;">
+                            <button class="view-full-btn" onclick="openModal('mango-project-new.png')">View
+                                Design</button>
+                            <!-- Card Actions -->
+                            <div class="card-actions">
+                                <div class="action-left">
+                                    <button class="action-icon-btn like-btn" onclick="toggleLike(this)">
+                                        <i class="far fa-heart"></i>
+                                        <span class="count">0</span>
+                                    </button>
+                                    <button class="action-icon-btn comment-btn" onclick="toggleComments(this)">
+                                        <i class="far fa-comment"></i>
+                                        <span class="count">0</span>
+                                    </button>
+                                </div>
+                                <button class="action-icon-btn download-btn" title="Download Assets"><i
+                                        class="fas fa-download"></i></button>
+                            </div>
+                        </div>
+
+                        <!-- Comment Section -->
+                        <div class="comment-section" style="display: none;">
+                            <div class="comment-input-area">
+                                <input type="text" placeholder="Write a comment..." class="comment-input">
+                                <button class="comment-submit"><i class="fas fa-paper-plane"></i></button>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -280,13 +406,37 @@
                     <div class="browser-content">
                         <img src="calculator-ui-new.png" alt="Calculator UI Design" class="browser-img">
                     </div>
-                    <div style="padding: 25px;">
+                    <div style="padding: 20px;">
                         <h3 style="font-size: 1.5rem; margin-bottom: 10px;">Modern Calculator UI</h3>
                         <p style="opacity: 0.7;">A sleek, dark-mode focused calculator interface designed in Figma.
                             Prioritizes accessibility, clear visual hierarchy, and a satisfying tactile feel for
                             buttons.
                         </p>
                         <button class="view-full-btn" onclick="openModal('calculator-ui-new.png')">View Design</button>
+
+                        <!-- Card Actions -->
+                        <div class="card-actions">
+                            <div class="action-left">
+                                <button class="action-icon-btn like-btn" onclick="toggleLike(this)">
+                                    <i class="far fa-heart"></i>
+                                    <span class="count">0</span>
+                                </button>
+                                <button class="action-icon-btn comment-btn" onclick="toggleComments(this)">
+                                    <i class="far fa-comment"></i>
+                                    <span class="count">0</span>
+                                </button>
+                            </div>
+                            <button class="action-icon-btn download-btn" title="Download Assets"><i
+                                    class="fas fa-download"></i></button>
+                        </div>
+
+                        <!-- Comment Section -->
+                        <div class="comment-section" style="display: none;">
+                            <div class="comment-input-area">
+                                <input type="text" placeholder="Write a comment..." class="comment-input">
+                                <button class="comment-submit"><i class="fas fa-paper-plane"></i></button>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -300,13 +450,37 @@
                     <div class="browser-content">
                         <img src="zing-project.png" alt="Zing Juice Brand" class="browser-img">
                     </div>
-                    <div style="padding: 25px;">
+                    <div style="padding: 20px;">
                         <h3 style="font-size: 1.5rem; margin-bottom: 10px;">Zing Fresh Juice</h3>
                         <p style="opacity: 0.7;">An energetic and bold landing page for an organic drink startup. Uses
                             large
                             typography and 3D product renders to create an immersive, thirst-quenching user experience.
                         </p>
                         <button class="view-full-btn" onclick="openModal('zing-project.png')">View Design</button>
+
+                        <!-- Card Actions -->
+                        <div class="card-actions">
+                            <div class="action-left">
+                                <button class="action-icon-btn like-btn" onclick="toggleLike(this)">
+                                    <i class="far fa-heart"></i>
+                                    <span class="count">0</span>
+                                </button>
+                                <button class="action-icon-btn comment-btn" onclick="toggleComments(this)">
+                                    <i class="far fa-comment"></i>
+                                    <span class="count">0</span>
+                                </button>
+                            </div>
+                            <button class="action-icon-btn download-btn" title="Download Assets"><i
+                                    class="fas fa-download"></i></button>
+                        </div>
+
+                        <!-- Comment Section -->
+                        <div class="comment-section" style="display: none;">
+                            <div class="comment-input-area">
+                                <input type="text" placeholder="Write a comment..." class="comment-input">
+                                <button class="comment-submit"><i class="fas fa-paper-plane"></i></button>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -320,52 +494,41 @@
                     <div class="browser-content">
                         <img src="blueberry-project-new.png" alt="Blueberry Juice UI" class="browser-img">
                     </div>
-                    <div style="padding: 25px;">
+                    <div style="padding: 20px;">
                         <h3 style="font-size: 1.5rem; margin-bottom: 10px;">Blueberry Delight UI</h3>
                         <p style="opacity: 0.7;">A premium, dark-themed product concept. "Sip into Freshness" with
                             deep
                             purple visuals and floating elements that evoke a sense of luxury and taste.</p>
                         <button class="view-full-btn" onclick="openModal('blueberry-project-new.png')">View
                             Design</button>
+
+                        <!-- Card Actions -->
+                        <div class="card-actions">
+                            <div class="action-left">
+                                <button class="action-icon-btn like-btn" onclick="toggleLike(this)">
+                                    <i class="far fa-heart"></i>
+                                    <span class="count">0</span>
+                                </button>
+                                <button class="action-icon-btn comment-btn" onclick="toggleComments(this)">
+                                    <i class="far fa-comment"></i>
+                                    <span class="count">0</span>
+                                </button>
+                            </div>
+                            <button class="action-icon-btn download-btn" title="Download Assets"><i
+                                    class="fas fa-download"></i></button>
+                        </div>
+
+                        <!-- Comment Section -->
+                        <div class="comment-section" style="display: none;">
+                            <div class="comment-input-area">
+                                <input type="text" placeholder="Write a comment..." class="comment-input">
+                                <button class="comment-submit"><i class="fas fa-paper-plane"></i></button>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Hidden Project 1 (Duplicate for Demo) -->
-                <div class="browser-card reveal-up delay-100 hidden-project">
-                    <div class="browser-header">
-                        <span class="browser-dot dot-red"></span>
-                        <span class="browser-dot dot-yellow"></span>
-                        <span class="browser-dot dot-green"></span>
-                    </div>
-                    <div class="browser-content">
-                        <img src="ecommerce-landscape.png" alt="Fashion Store" class="browser-img">
-                    </div>
-                    <div style="padding: 25px;">
-                        <h3 style="font-size: 1.5rem; margin-bottom: 10px;">Fashion Store</h3>
-                        <p style="opacity: 0.7;">A minimalist eCommerce conceptual design focusing on high-quality
-                            imagery and clean typography.</p>
-                        <button class="view-full-btn" onclick="openModal('ecommerce-landscape.png')">View
-                            Design</button>
-                    </div>
-                </div>
 
-                <!-- Hidden Project 2 (Duplicate for Demo) -->
-                <div class="browser-card reveal-up delay-200 hidden-project">
-                    <div class="browser-header">
-                        <span class="browser-dot dot-red"></span>
-                        <span class="browser-dot dot-yellow"></span>
-                        <span class="browser-dot dot-green"></span>
-                    </div>
-                    <div class="browser-content">
-                        <img src="fintech-landscape.png" alt="Fintech Dashboard" class="browser-img">
-                    </div>
-                    <div style="padding: 25px;">
-                        <h3 style="font-size: 1.5rem; margin-bottom: 10px;">Fintech Dashboard</h3>
-                        <p style="opacity: 0.7;">Complex data visualization made simple. A dashboard layout that
-                            prioritizes financial clarity.</p>
-                        <button class="view-full-btn" onclick="openModal('fintech-landscape.png')">View Design</button>
-                    </div>
-                </div>
             </div>
 
             <div class="browser-btn-container">
@@ -373,84 +536,7 @@
             </div>
         </section>
 
-        <!-- Huge Image Slider Section -->
-        <section class="slider-section animate-on-scroll">
-            <h2 class="section-title-custom scroll-move-right">Featured
-                <span class="title-highlight">Case Studies</span>
-            </h2>
 
-            <div class="slider-container">
-                <div class="slider-wrapper">
-
-                    <!-- Slide 1: Pandora Style (Pink/Beige) -->
-                    <div class="slide-item slide-1">
-                        <button class="slide-pause-btn" onclick="toggleSlidePlay(this)" title="Pause Autoplay">
-                            <i class="fas fa-pause"></i>
-                        </button>
-                        <div class="slide-content">
-                            <div class="slide-label">E-Commerce</div>
-                            <h2 class="slide-title">Global Product Experience</h2>
-                            <p class="slide-desc">
-                                Design direction leading the future of e-commerce shopping experiences.
-                                Includes product landing pages, cart flows, and checkout optimization.
-                            </p>
-                            <a href="#" class="btn btn-primary"
-                                style="background: #000; color: #fff; padding: 15px 35px;">View Case Study</a>
-                        </div>
-                        <div class="slide-visual" style="opacity: 0;"> <!-- Hidden to show background -->
-                            <img src="ecommerce-case-study.png" alt="Mockup" class="mockup-img">
-                        </div>
-                    </div>
-
-                    <!-- Slide 2: Mobile App (Blue/Cyan) -->
-                    <div class="slide-item slide-2">
-                        <button class="slide-pause-btn" onclick="toggleSlidePlay(this)" title="Pause Autoplay">
-                            <i class="fas fa-pause"></i>
-                        </button>
-                        <div class="slide-content">
-                            <div class="slide-label">Fintech App</div>
-                            <h2 class="slide-title">Smart Banking for Everyone</h2>
-                            <p class="slide-desc">
-                                A complete overhaul of the mobile banking experience, focusing on accessibility,
-                                speed, and financial clarity for over 2 million users.
-                            </p>
-                            <a href="#" class="btn btn-primary"
-                                style="background: #000; color: #fff; padding: 15px 35px;">View Case Study</a>
-                        </div>
-                        <div class="slide-visual" style="opacity: 0;">
-                            <img src="fintech-case-study.png" alt="Mockup" class="mockup-img">
-                        </div>
-                    </div>
-
-                    <!-- Slide 3: Dashboard (Purple) -->
-                    <div class="slide-item slide-3">
-                        <button class="slide-pause-btn" onclick="toggleSlidePlay(this)" title="Pause Autoplay">
-                            <i class="fas fa-pause"></i>
-                        </button>
-                        <div class="slide-content">
-                            <div class="slide-label">SaaS Platform</div>
-                            <h2 class="slide-title">Analytics Dashboard Redesign</h2>
-                            <p class="slide-desc">
-                                Simplifying complex data visualization into an intuitive dashboard
-                                that empowers users to make data-driven decisions instantly.
-                            </p>
-                            <a href="#" class="btn btn-primary"
-                                style="background: #fff; color: #000; padding: 15px 35px;">View Case Study</a>
-                        </div>
-                        <div class="slide-visual" style="opacity: 0;">
-                            <img src="analytics-case-study.png" alt="Mockup" class="mockup-img">
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- Navigation -->
-                <div class="slider-nav">
-                    <button class="nav-btn prev-btn"><i class="fas fa-arrow-left"></i></button>
-                    <button class="nav-btn next-btn"><i class="fas fa-arrow-right"></i></button>
-                </div>
-            </div>
-        </section>
 
         <!-- Projects Section (Bento Grid Redesign) -->
         <section id="projects" class="bento-section animate-on-scroll">
@@ -462,6 +548,14 @@
                 <!-- Card 1: Tall Dark (Left) - "System Architecture" -->
                 <div class="bento-card row-span-2 bento-dark reveal-up delay-100"
                     style="background: linear-gradient(rgba(0, 0, 0, 0.311), rgba(0, 0, 0, 0.5)), url('forex-trading-setup-vacant-office.jpg') center/cover no-repeat;">
+                    <div class="bento-actions">
+                        <button class="bento-action-btn like-btn" onclick="toggleLike(this)" title="Like">
+                            <i class="far fa-heart"></i> <span class="count">0</span>
+                        </button>
+                        <button class="bento-action-btn comment-btn" onclick="toggleComments(this)" title="Comments">
+                            <i class="far fa-comment"></i> <span class="count">0</span>
+                        </button>
+                    </div>
                     <div class="bento-content">
                         <div class="bento-subtitle">Development</div>
                         <div
@@ -478,6 +572,14 @@
                 <div class="bento-card span-2 bento-gradient-1 reveal-left delay-200"
                     style="background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('immersive_web.jpg') center top/cover no-repeat;">
                     <!-- Using CSS Pattern or Gradient instead of external image for reliability -->
+                    <div class="bento-actions">
+                        <button class="bento-action-btn like-btn" onclick="toggleLike(this)" title="Like">
+                            <i class="far fa-heart"></i> <span class="count">0</span>
+                        </button>
+                        <button class="bento-action-btn comment-btn" onclick="toggleComments(this)" title="Comments">
+                            <i class="far fa-comment"></i> <span class="count">0</span>
+                        </button>
+                    </div>
                     <div class="bento-content">
                         <div
                             style="background: rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 4px; display: inline-block; font-size: 10px; font-weight: 700; margin-bottom: 10px;">
@@ -489,20 +591,28 @@
                 </div>
 
                 <!-- Card 3: Small White (Middle) - Tech Stack -->
-                <div class="bento-card reveal-up delay-300">
-                    <div class="bento-tech-grid">
-                        <i class="fab fa-react" title="React"></i>
-                        <i class="fab fa-node-js" title="Node.js"></i>
-                        <i class="fab fa-python" title="Python"></i>
-                        <i class="fab fa-aws" title="AWS"></i>
-                        <i class="fab fa-docker" title="Docker"></i>
-                        <i class="fab fa-git-alt" title="Git"></i>
+                <div class="bento-card reveal-up delay-300"
+                    style="overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                    <div class="logo-marquee-container">
+                        <div class="logo-marquee-track">
+                            <i class="fab fa-html5" style="color: #e34c26;"></i>
+                            <i class="fab fa-css3-alt" style="color: #264de4;"></i>
+                            <i class="fab fa-js" style="color: #f7df1e;"></i>
+                            <i class="fab fa-react" style="color: #61dbfb;"></i>
+                            <i class="fab fa-figma" style="color: #F24E1E;"></i>
+                            <i class="fas fa-cube" style="color: #ff3366;"></i> <!-- Spline -->
+                            <!-- 1 Duplicate for Loop -->
+                            <i class="fab fa-html5" style="color: #e34c26;"></i>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Card 4: Green/Dark Gradient (Middle Right) - "Mobile Apps" -->
                 <div class="bento-card reveal-right delay-300"
                     style="background: url('flutter_dev.jpg') center/cover no-repeat;">
+                    <button class="like-btn bento-like-btn" onclick="toggleLike(this)" title="Like this project">
+                        <i class="far fa-heart"></i> <span class="count">0</span>
+                    </button>
                     <div class="bento-content">
                         <div class="bento-subtitle" style="color: #444;">Mobile</div>
                         <h3 class="bento-title" style="color: #000;">Flutter Development</h3>
@@ -536,6 +646,8 @@
             </div>
         </section>
 
+
+
         <!-- Get In Touch Section -->
         <section id="contact" class="get-in-touch-section animate-on-scroll">
             <div class="get-in-touch-content">
@@ -553,10 +665,11 @@
 
         <footer class="main-footer">
             <div class="footer-social">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.facebook.com/share/1HdQDG4MnJ/?mibextid=wwXIfr" target="_blank"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a href="https://github.com/akasha-nadeel" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/akasha-nadeel-381930387?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                    target="_blank"><i class="fab fa-linkedin-in"></i></a>
             </div>
             <p class="copyright">&copy; 2026 Akasha Nadeel. All Rights Reserved.</p>
         </footer>
@@ -564,8 +677,10 @@
 
 
     <div id="imageModal" class="image-modal">
-        <span class="modal-close" onclick="closeModal()">&times;</span>
-        <img class="modal-content" id="img01">
+        <div class="modal-wrapper">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="img01">
+        </div>
     </div>
 
     <!-- Contact Form Modal -->
@@ -610,6 +725,20 @@
         </div>
     </div>
 
+    <!-- Generic Download Confirmation Modal -->
+    <div id="download-modal" class="custom-modal">
+        <div class="custom-modal-content">
+            <h3>Download Assets</h3>
+            <p>You are about to download the assets for this project.</p>
+            <p class="download-filename" style="font-size: 0.9rem; color: #888; margin-bottom: 15px;"></p>
+            <p>Do you wish to proceed?</p>
+            <div class="modal-buttons">
+                <button id="download-yes" class="btn btn-primary modal-btn">Yes</button>
+                <button id="download-no" class="btn btn-secondary modal-btn">No</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Thank You Modal -->
     <div id="thank-you-modal" class="custom-modal">
         <div class="custom-modal-content success-content">
@@ -624,6 +753,44 @@
     </div>
 
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+    <!-- Floating Theme Button (Seperate from Navbar) -->
+    <button id="floating-theme-btn" class="floating-theme-btn" aria-label="Toggle Dark Mode">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Comment Modal (Separate Section) -->
+    <div id="comment-modal" class="modal comment-modal-overlay">
+        <div class="comment-modal-box">
+            <div class="comment-header">
+                <h3 id="comment-project-title">Project Comments</h3>
+                <span class="close-comment-modal">&times;</span>
+            </div>
+            <div class="comment-body" id="comment-list-container" data-lenis-prevent>
+                <div class="no-comments-msg">No comments yet. Be the first to share your thoughts!</div>
+            </div>
+            <div id="comment-error-msg" style="display: none; color: #ff4757; font-size: 0.9rem; padding: 5px 20px;">
+            </div>
+            <div class="comment-footer">
+                <input type="text" id="modal-comment-name" placeholder="Name" style="flex: 0 0 100px;">
+                <input type="text" id="modal-comment-input" placeholder="Write a comment...">
+                <button id="modal-comment-submit"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div id="delete-confirm-modal" class="delete-modal-overlay">
+        <div class="delete-modal-box">
+            <h3>Delete Comment?</h3>
+            <p>Are you sure you want to permanently delete this comment?</p>
+            <div class="delete-modal-actions">
+                <button id="cancel-delete-btn" class="btn-cancel">Cancel</button>
+                <button id="confirm-delete-btn" class="btn-delete">Delete</button>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 
