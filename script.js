@@ -234,7 +234,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Intersection Observer for Animate on Scroll
     const observerOptions = {
         threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px" // Triggers slightly before bottom to avoid edge flickering
+        rootMargin: "0px 0px 100px 0px" // Triggers 100px before entering viewport for smoother feel
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -294,6 +294,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 clearInterval(checkForLenis);
             }
         }, 500);
+    }
+
+    // --- Hero Center Area Hover Effect ---
+    const heroHitbox = document.getElementById('hero-center-area');
+    if (heroSection && heroHitbox) {
+        heroHitbox.addEventListener('mouseenter', () => {
+            // Only apply if desktop (width > 1100) or if we want it generally but hitbox might not exist on mobile
+            if (window.innerWidth > 1100) {
+                heroSection.classList.add('zoom-active');
+            }
+        });
+        heroHitbox.addEventListener('mouseleave', () => {
+            heroSection.classList.remove('zoom-active');
+        });
     }
 });
 
