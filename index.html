@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akasha Nadeel Portfolio</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_contact.css">
+    <link rel="stylesheet" href="style_services_3d.css">
+</head>
+
+<body>
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+            }
+        })();
+    </script>
+
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress-bar"></div>
+
+    <!-- Loader -->
+    <div id="loader">
+        <div class="robot-container">
+            <div class="robot-head">
+                <div class="robot-antenna"></div>
+                <div class="robot-ears"></div>
+                <div class="robot-eyes">
+                    <div class="robot-eye left"></div>
+                    <div class="robot-eye right"></div>
+                </div>
+                <div class="robot-mouth"></div>
+            </div>
+            <div class="robot-shadow"></div>
+            <p class="robot-text">INITIALIZING...</p>
+        </div>
+    </div>
+
+
+    <div class="perspective-container">
+        <nav class="navbar">
+            <div class="logo-container">
+                <a href="#home" class="logo">
+                    <span class="logo-char">A</span><span class="logo-char">N</span><span class="logo-dot">.</span>
+                </a>
+            </div>
+
+
+
+            <div class="nav-btn-container">
+                <a href="#services" class="cv-btn"><span>My Services</span></a>
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <header id="home" class="hero-section">
+            <div class="mobile-hero-wrapper">
+                <img src="hero-image.png" class="mobile-avatar light-mode-img" alt="Akasha Nadeel">
+                <img src="dark-hero-image.png" class="mobile-avatar dark-mode-img" alt="Akasha Nadeel">
+            </div>
+            <div class="bg-text-container">
+                <div class="typing-box">
+                    <h1 class="hero-name">
+                        <span class="line-1">Akasha</span>
+                        <span class="line-2">Nadeel</span>
+                    </h1>
+                    <div class="hero-roles">
+                        Software Engineer | Web Designer<br>| Web Developer
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-grid">
+                <div class="col-left">
+                    <ul class="main-social">
+                        <li><a href="https://www.facebook.com/share/1HdQDG4MnJ/?mibextid=wwXIfr" target="_blank"><i
+                                    class="fab fa-facebook-f icon"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/akasha-nadeel-381930387?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                                target="_blank"><i class="fab fa-linkedin-in icon"></i></a></li>
+                        <li><a href="https://github.com/akasha-nadeel" target="_blank"><i
+                                    class="fab fa-github icon"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="col-center" id="hero-center-area"></div>
+
+                <div class="col-right">
+                    <div class="content-anim-wrapper">
+                        <div class="content__container">
+                            <p class="content__container__text">I am a</p>
+                            <ul class="content__container__list">
+                                <li class="content__container__list__item">Developer!</li>
+                                <li class="content__container__list__item">Designer!</li>
+                                <li class="content__container__list__item">Creator!</li>
+                                <li class="content__container__list__item">Developer!</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="cta-group">
+                        <a href="#projects" class="btn btn-primary">Projects</a>
+                        <a href="#contact" class="btn btn-light">ContactMe</a>
+                    </div>
+
+                    <div class="stats">
+                        <div class="stat-item">
+                            <p><strong><span class="count-up" data-target="2">0</span>+</strong><br> years of Experience
+                            </p>
+                        </div>
+                        <div class="stat-item">
+                            <p><strong><span class="count-up" data-target="50">0</span>+</strong><br> Submitted Projects
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+
+        <!-- About Section (Redesign) -->
+        <!-- About Section (Bento Style Redesign) -->
+        <section id="about" class="about-section animate-on-scroll">
+
+            <!-- Modern Tech Marquee -->
+            <div class="modern-tech-marquee" style="margin-bottom: 20px; border-radius: 12px;">
+                <div class="tech-track">
+                    <!-- Set 1 -->
+                    <span class="tech-item"><i class="fab fa-html5" style="color: #e34c26;"></i> HTML</span>
+                    <span class="tech-item"><i class="fab fa-css3-alt" style="color: #264de4;"></i> CSS</span>
+                    <span class="tech-item"><i class="fab fa-js" style="color: #f7df1e;"></i> JavaScript</span>
+                    <span class="tech-item"><i class="fab fa-react" style="color: #61dbfb;"></i> React</span>
+                    <span class="tech-item"><i class="fab fa-figma" style="color: #F24E1E;"></i> Figma</span>
+                    <span class="tech-item"><i class="fas fa-cube" style="color: #ff3366;"></i> Spline</span>
+                    <span class="tech-item"><i class="fab fa-java" style="color: #007396;"></i> Java</span>
+
+                    <!-- Set 2 (Duplicate) -->
+                    <span class="tech-item"><i class="fab fa-html5" style="color: #e34c26;"></i> HTML</span>
+                    <span class="tech-item"><i class="fab fa-css3-alt" style="color: #264de4;"></i> CSS</span>
+                    <span class="tech-item"><i class="fab fa-js" style="color: #f7df1e;"></i> JavaScript</span>
+                    <span class="tech-item"><i class="fab fa-react" style="color: #61dbfb;"></i> React</span>
+                    <span class="tech-item"><i class="fab fa-figma" style="color: #F24E1E;"></i> Figma</span>
+                    <span class="tech-item"><i class="fas fa-cube" style="color: #ff3366;"></i> Spline</span>
+                    <span class="tech-item"><i class="fab fa-java" style="color: #007396;"></i> Java</span>
+
+                    <!-- Set 3 (Extra Safety) -->
+                    <span class="tech-item"><i class="fab fa-html5" style="color: #e34c26;"></i> HTML</span>
+                    <span class="tech-item"><i class="fab fa-css3-alt" style="color: #264de4;"></i> CSS</span>
+                    <span class="tech-item"><i class="fab fa-js" style="color: #f7df1e;"></i> JavaScript</span>
+                    <span class="tech-item"><i class="fab fa-react" style="color: #61dbfb;"></i> React</span>
+                    <span class="tech-item"><i class="fab fa-figma" style="color: #F24E1E;"></i> Figma</span>
+                    <span class="tech-item"><i class="fas fa-cube" style="color: #ff3366;"></i> Spline</span>
+                    <span class="tech-item"><i class="fab fa-java" style="color: #007396;"></i> Java</span>
+                </div>
+            </div>
+
+            <div class="about-bento-container">
+                <!-- Left Column: Profile Card -->
+                <div class="about-card profile-card">
+                    <div class="profile-image-wrapper">
+                        <img src="profile-light.png" alt="Akasha Nadeel" class="profile-img light-img">
+                        <img src="profile-dark.png?v=2" alt="Akasha Nadeel" class="profile-img dark-img"
+                            style="display: none;">
+                    </div>
+
+                    <h3 class="profile-name">Akasha Nadeel</h3>
+                    <p class="profile-email">Kha.akashanadeel@gmail.com</p>
+                    <a href="Akasha_Nadeel_CV.pdf" download="Akasha_Nadeel_CV.pdf"
+                        class="btn btn-primary download-cv-btn">Download CV <i class="fa-solid fa-arrow-down"></i></a>
+                </div>
+
+                <!-- Right Column: Bio & Info -->
+                <div class="about-right-col">
+
+                    <!-- Top: Bio Card -->
+                    <div class="about-card bio-card">
+                        <div class="bio-header">
+                            <h2 class="bio-title">About Me</h2>
+                            <span class="status-badge"><i class="fas fa-check-circle"></i> Open to work</span>
+                        </div>
+                        <p class="bio-text">
+                            Visual Designer with 2+ years of experience. I'm all about crafting user-friendly interfaces
+                            that are functional and visually compelling.
+                        </p>
+                        <p class="bio-text">
+                            Born and raised in the digital world. When I'm not busy designing, you'll likely find me
+                            exploring new tech, gaming, or cooking some mouthwatering code.
+                        </p>
+                        <!-- Decorative Circle Text -->
+                        <div class="circle-text-badge">
+                            <svg viewBox="0 0 100 100" width="100" height="100">
+                                <defs>
+                                    <path id="circle" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" />
+                                </defs>
+                                <text font-size="12">
+                                    <textPath xlink:href="#circle">
+                                        AKASHA NADEEL • AKASHA NADEEL •
+                                    </textPath>
+                                </text>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Bottom: Roles & Stack Card -->
+                    <div class="about-card stats-card">
+                        <div class="stats-section">
+                            <h4 class="stats-title">Latest Roles</h4>
+                            <div class="role-item">
+                                <div class="role-icon-box" style="background: #E1306C;"><i class="fab fa-instagram"></i>
+                                </div>
+                                <div class="role-details">
+                                    <span class="role-name">UI Designer</span>
+                                    <span class="role-company">Freelance</span>
+                                </div>
+                            </div>
+                            <div class="role-item">
+                                <div class="role-icon-box" style="background: #000;"><i class="fas fa-terminal"></i>
+                                </div>
+                                <div class="role-details">
+                                    <span class="role-name">Software Engineer</span>
+                                    <span class="role-company">Tech Corp</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stack-section">
+                            <h4 class="stats-title">Main Apps</h4>
+                            <div class="stack-icons-row">
+                                <i class="fab fa-figma" title="Figma"></i>
+                                <i class="fab fa-sketch" title="Sketch"></i>
+                                <i class="fab fa-react" title="React"></i>
+                                <i class="fas fa-code" title="Code"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section id="services" class="services-3d-section animate-on-scroll">
+            <div class="services-header-row">
+                <h2 class="section-title-custom" style="margin: 0;">My <span class="title-highlight">Services</span>
+                </h2>
+                <div class="service-counter">02/03</div>
+            </div>
+
+            <!-- 3D Slider Container -->
+            <div class="s3d-container">
+                <button class="s3d-nav-btn prev-btn-3d"><i class="fas fa-chevron-left"></i></button>
+
+                <div class="s3d-wrapper">
+                    <!-- Item 1: Mobile -->
+                    <div class="s3d-item prev" data-index="0" style="background-image: url('flutter_dev.jpg');">
+                        <div class="s3d-content">
+                            <h3 class="s3d-title">Mobile</h3>
+                            <p style="color: #fff; opacity: 0.9;">Flutter & React Native</p>
+                        </div>
+                    </div>
+                    <!-- Item 2: Web (Active) -->
+                    <div class="s3d-item active" data-index="1" style="background-image: url('immersive_web.jpg');">
+                        <div class="s3d-content">
+                            <h3 class="s3d-title">Web</h3>
+                            <p style="color: #fff; opacity: 0.9;">React, Node & 3D</p>
+                        </div>
+                    </div>
+                    <!-- Item 3: Design -->
+                    <div class="s3d-item next" data-index="2" style="background-image: url('design_slider_bg.png');">
+                        <div class="s3d-content">
+                            <h3 class="s3d-title">Design</h3>
+                            <p style="color: #fff; opacity: 0.9;">UI/UX & Systems</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="s3d-nav-btn next-btn-3d"><i class="fas fa-chevron-right"></i></button>
+            </div>
+
+            <div class="s3d-dots">
+                <span class="s3d-dot" onclick="goToService(0)"></span>
+                <span class="s3d-dot active" onclick="goToService(1)"></span>
+                <span class="s3d-dot" onclick="goToService(2)"></span>
+            </div>
+
+            <!-- Original Services Grid (Descriptions) -->
+            <div class="services-grid" style="margin-top: 60px; width: 100%; max-width: 1200px;">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="service-title">Web Development</h3>
+                    <p class="service-desc">
+                        Building fast, responsive, and scalable websites using modern technologies like React, Node.js,
+                        and Next.js.
+                    </p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3 class="service-title">UI/UX Design</h3>
+                    <p class="service-desc">
+                        Creating intuitive, pixel-perfect, and accessible user interfaces that provide seamless digital
+                        experiences.
+                    </p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="service-title">Mobile Apps</h3>
+                    <p class="service-desc">
+                        Developing cross-platform mobile applications for both iOS and Android using Flutter and React
+                        Native.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Browser Mockup Works Section -->
+        <section class="browser-works-section animate-on-scroll" style="display: none;">
+            <h2 class="section-title-custom scroll-move-right">UI/UX & Web
+                <span class="title-highlight">Projects</span>
+            </h2>
+
+            <div class="browser-grid">
+                <!-- Project 1: Mango Ice Cream -->
+                <div class="browser-card reveal-up delay-100">
+                    <div class="browser-header">
+                        <span class="browser-dot dot-red"></span>
+                        <span class="browser-dot dot-yellow"></span>
+                        <span class="browser-dot dot-green"></span>
+                    </div>
+                    <div class="browser-content">
+                        <img src="mango-project-new.png" alt="Mango Ice Cream" class="browser-img">
+                    </div>
+                    <div style="padding: 20px; display: flex; flex-direction: column; flex: 1;">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 10px;">Mango Ice Creams UI</h3>
+                        <p
+                            style="opacity: 0.7; min-height: 7.5em; line-height: 1.5em; display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical; overflow: hidden;">
+                            A vibrant, mouth-watering landing page design for a premium dessert brand focused on summer
+                            vibes.
+                            This UI concept features dynamic scroll interactions, floating elements, and a rich color
+                            palette.
+                            The design emphasizes visual storytelling to create an immersive, thirst-quenching user
+                            experience.
+                            Every element is carefully placed to drive conversions while maintaining a playful and fresh
+                            aesthetic.
+                            It showcases a perfect blend of modern typography and high-quality imagery for maximum
+                            impact.
+                        </p>
+
+                        <div style="margin-top: auto;">
+                            <button class="view-full-btn" onclick="openModal('mango-project-new.png')">View
+                                Design</button>
+                            <!-- Card Actions -->
+                            <div class="card-actions">
+                                <div class="action-left">
+                                    <button class="action-icon-btn like-btn" onclick="toggleLike(this)">
+                                        <i class="far fa-heart"></i>
+                                        <span class="count">0</span>
+                                    </button>
+                                    <button class="action-icon-btn comment-btn" onclick="toggleComments(this)">
+                                        <i class="far fa-comment"></i>
+                                        <span class="count">0</span>
+                                    </button>
+                                </div>
+                                <button class="action-icon-btn download-btn" title="Download Assets"><i
+                                        class="fas fa-download"></i></button>
+                            </div>
+                        </div>
+
+                        <!-- Comment Section -->
+                        <div class="comment-section" style="display: none;">
+                            <div class="comment-input-area">
+                                <input type="text" placeholder="Write a comment..." class="comment-input">
+                                <button class="comment-submit"><i class="fas fa-paper-plane"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Calculator UI -->
+                <div class="browser-card reveal-up delay-200">
+                    <div class="browser-header">
+                        <span class="browser-dot dot-red"></span>
+                        <span class="browser-dot dot-yellow"></span>
+                        <span class="browser-dot dot-green"></span>
+                    </div>
+                    <div class="browser-content">
+                        <img src="calculator-ui-new.png" alt="Calculator UI Design" class="browser-img">
+                    </div>
+                    <div style="padding: 20px;">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 10px;">Modern Calculator UI</h3>
+                        <p
+                            style="opacity: 0.7; min-height: 7.5em; line-height: 1.5em; display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical; overflow: hidden;">
+                            A sleek, dark-mode focused calculator interface designed specifically for modern mobile
+                            applications.
+                            This UI prioritizes accessibility with high-contrast colors and a clear, intuitive visual
+                            hierarchy.
+                            The design includes satisfying tactile feedback for buttons to enhance the overall user
+                            interaction.
+                            It balances functionality with aesthetics, providing a seamless experience for complex
+                            calculations.
+                            The minimalist approach ensures distraction-free usage while maintaining a professional
+                            look.
+                        </p>
+                        <button class="view-full-btn" onclick="openModal('calculator-ui-new.png')">View Design</button>
+
+                        <!-- Card Actions -->
+                        <div class="card-actions">
+                            <div class="action-left">
+                                <button class="action-icon-btn like-btn" onclick="toggleLike(this)">
+                                    <i class="far fa-heart"></i>
+                                    <span class="count">0</span>
+                                </button>
+                                <button class="action-icon-btn comment-btn" onclick="toggleComments(this)">
+                                    <i class="far fa-comment"></i>
+                                    <span class="count">0</span>
+                                </button>
+                            </div>
+                            <button class="action-icon-btn download-btn" title="Download Assets"><i
+                                    class="fas fa-download"></i></button>
+                        </div>
+
+                        <!-- Comment Section -->
+                        <div class="comment-section" style="display: none;">
+                            <div class="comment-input-area">
+                                <input type="text" placeholder="Write a comment..." class="comment-input">
+                                <button class="comment-submit"><i class="fas fa-paper-plane"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Zing Juice Brand -->
+                <div class="browser-card reveal-up delay-300">
+                    <div class="browser-header">
+                        <span class="browser-dot dot-red"></span>
+                        <span class="browser-dot dot-yellow"></span>
+                        <span class="browser-dot dot-green"></span>
+                    </div>
+                    <div class="browser-content">
+                        <img src="zing-project.png" alt="Zing Juice Brand" class="browser-img">
+                    </div>
+                    <div style="padding: 20px;">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 10px;">Zing Fresh Juice UI</h3>
+                        <p
+                            style="opacity: 0.7; min-height: 7.5em; line-height: 1.5em; display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical; overflow: hidden;">
+                            An energetic and bold landing page designed for an organic drink startup to capture market
+                            attention.
+                            This UI uses large, impactful typography and 3D product renders to create an immersive
+                            experience.
+                            The layout is designed to be responsive and engaging, encouraging users to explore various
+                            flavors.
+                            Vibrant colors and fluid animations mimic the freshness of the ingredients used in the
+                            drinks.
+                            It successfully combines brand storytelling with modern e-commerce design principles for
+                            better engagement.
+                        </p>
+                        <button class="view-full-btn" onclick="openModal('zing-project.png')">View Design</button>
+
+                        <!-- Card Actions -->
+                        <div class="card-actions">
+                            <div class="action-left">
+                                <button class="action-icon-btn like-btn" onclick="toggleLike(this)">
+                                    <i class="far fa-heart"></i>
+                                    <span class="count">0</span>
+                                </button>
+                                <button class="action-icon-btn comment-btn" onclick="toggleComments(this)">
+                                    <i class="far fa-comment"></i>
+                                    <span class="count">0</span>
+                                </button>
+                            </div>
+                            <button class="action-icon-btn download-btn" title="Download Assets"><i
+                                    class="fas fa-download"></i></button>
+                        </div>
+
+                        <!-- Comment Section -->
+                        <div class="comment-section" style="display: none;">
+                            <div class="comment-input-area">
+                                <input type="text" placeholder="Write a comment..." class="comment-input">
+                                <button class="comment-submit"><i class="fas fa-paper-plane"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Blueberry Juice UI -->
+                <div class="browser-card reveal-up delay-400">
+                    <div class="browser-header">
+                        <span class="browser-dot dot-red"></span>
+                        <span class="browser-dot dot-yellow"></span>
+                        <span class="browser-dot dot-green"></span>
+                    </div>
+                    <div class="browser-content">
+                        <img src="blueberry-project-new.png" alt="Blueberry Juice UI" class="browser-img">
+                    </div>
+                    <div style="padding: 20px;">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 10px;">Blueberry Delight UI</h3>
+                        <p
+                            style="opacity: 0.7; min-height: 7.5em; line-height: 1.5em; display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical; overflow: hidden;">
+                            A premium, dark-themed product concept titled "Sip into Freshness" designed for luxury
+                            appeal.
+                            This UI features deep purple visuals and floating elements that evoke a sense of exclusivity
+                            and taste.
+                            The dark background allows the product imagery to pop, creating a striking visual contrast.
+                            Subtle gradients and shadows add depth, making the interface feel modern and sophisticated.
+                            This design demonstrates how dark mode can be used effectively to highlight premium
+                            products.
+                        </p>
+                        <button class="view-full-btn" onclick="openModal('blueberry-project-new.png')">View
+                            Design</button>
+
+                        <!-- Card Actions -->
+                        <div class="card-actions">
+                            <div class="action-left">
+                                <button class="action-icon-btn like-btn" onclick="toggleLike(this)">
+                                    <i class="far fa-heart"></i>
+                                    <span class="count">0</span>
+                                </button>
+                                <button class="action-icon-btn comment-btn" onclick="toggleComments(this)">
+                                    <i class="far fa-comment"></i>
+                                    <span class="count">0</span>
+                                </button>
+                            </div>
+                            <button class="action-icon-btn download-btn" title="Download Assets"><i
+                                    class="fas fa-download"></i></button>
+                        </div>
+
+                        <!-- Comment Section -->
+                        <div class="comment-section" style="display: none;">
+                            <div class="comment-input-area">
+                                <input type="text" placeholder="Write a comment..." class="comment-input">
+                                <button class="comment-submit"><i class="fas fa-paper-plane"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: Digital Library Green -->
+                <div class="browser-card reveal-up delay-100">
+                    <div class="browser-header">
+                        <span class="browser-dot dot-red"></span>
+                        <span class="browser-dot dot-yellow"></span>
+                        <span class="browser-dot dot-green"></span>
+                    </div>
+                    <div class="browser-content">
+                        <img src="ui-library-green.png" alt="Digital Library UI" class="browser-img">
+                    </div>
+                    <div style="padding: 20px;">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 10px;">Digital Library UI</h3>
+                        <p
+                            style="opacity: 0.7; min-height: 7.5em; line-height: 1.5em; display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical; overflow: hidden;">
+                            A minimalist, green-themed digital library interface focused on readability and calm
+                            aesthetics.
+                            This UI reduces cognitive load by using a soothing color palette and ample whitespace
+                            throughout.
+                            The design prioritizes content discovery, making it easy for users to find books and
+                            resources.
+                            Clean typography and intuitive navigation ensure that the focus remains on the reading
+                            material.
+                            It represents a modern approach to educational platforms, blending functionality with visual
+                            peace.
+                        </p>
+                        <button class="view-full-btn" onclick="openModal('ui-library-green.png')">View
+                            Design</button>
+
+                        <!-- Card Actions -->
+                        <div class="card-actions">
+                            <div class="action-left">
+                                <button class="action-icon-btn like-btn" onclick="toggleLike(this)">
+                                    <i class="far fa-heart"></i>
+                                    <span class="count">0</span>
+                                </button>
+                                <button class="action-icon-btn comment-btn" onclick="toggleComments(this)">
+                                    <i class="far fa-comment"></i>
+                                    <span class="count">0</span>
+                                </button>
+                            </div>
+                            <button class="action-icon-btn download-btn" title="Download Assets"><i
+                                    class="fas fa-download"></i></button>
+                        </div>
+                        <!-- Comment Section -->
+                        <div class="comment-section" style="display: none;">
+                            <div class="comment-input-area">
+                                <input type="text" placeholder="Write a comment..." class="comment-input">
+                                <button class="comment-submit"><i class="fas fa-paper-plane"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: FOC Library Dark -->
+                <div class="browser-card reveal-up delay-200">
+                    <div class="browser-header">
+                        <span class="browser-dot dot-red"></span>
+                        <span class="browser-dot dot-yellow"></span>
+                        <span class="browser-dot dot-green"></span>
+                    </div>
+                    <div class="browser-content">
+                        <img src="ui-library-dark.png" alt="FOC Library UI" class="browser-img">
+                    </div>
+                    <div style="padding: 20px;">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 10px;">FOC Library Portal UI</h3>
+                        <p
+                            style="opacity: 0.7; min-height: 7.5em; line-height: 1.5em; display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical; overflow: hidden;">
+                            A bold dark-themed portal for the Faculty of Computing, featuring high-contrast yellow
+                            accents.
+                            This UI is designed to be striking and professional, reflecting the faculty's innovative
+                            spirit.
+                            The dark mode ensures comfortable viewing during late-night study sessions for students.
+                            Key information is highlighted effectively using vibrant colors against the dark background.
+                            The portal integrates seamless navigation with a structured layout for easy access to
+                            resources.
+                        </p>
+                        <button class="view-full-btn" onclick="openModal('ui-library-dark.png')">View
+                            Design</button>
+
+                        <!-- Card Actions -->
+                        <div class="card-actions">
+                            <div class="action-left">
+                                <button class="action-icon-btn like-btn" onclick="toggleLike(this)">
+                                    <i class="far fa-heart"></i>
+                                    <span class="count">0</span>
+                                </button>
+                                <button class="action-icon-btn comment-btn" onclick="toggleComments(this)">
+                                    <i class="far fa-comment"></i>
+                                    <span class="count">0</span>
+                                </button>
+                            </div>
+                            <button class="action-icon-btn download-btn" title="Download Assets"><i
+                                    class="fas fa-download"></i></button>
+                        </div>
+                        <!-- Comment Section -->
+                        <div class="comment-section" style="display: none;">
+                            <div class="comment-input-area">
+                                <input type="text" placeholder="Write a comment..." class="comment-input">
+                                <button class="comment-submit"><i class="fas fa-paper-plane"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="browser-btn-container">
+                <button class="see-more-btn" onclick="toggleProjects()">Show More</button>
+            </div>
+        </section>
+
+        <!-- Websites Built Section -->
+        <section id="websites" class="mobile-apps-section animate-on-scroll">
+            <h2 class="section-title-custom scroll-move-right">Websites
+                <span class="title-highlight">Built</span>
+            </h2>
+            <p class="section-subtitle">Full-stack web applications designed and developed from scratch</p>
+
+            <div class="mobile-apps-grid">
+                <!-- Website 1: Computing Library -->
+                <div class="mobile-app-card reveal-up delay-100">
+                    <div class="mobile-app-preview web-project-preview">
+                        <img src="products/desktop/library web.png" alt="Faculty of Computing Resource Library"
+                            class="mobile-app-img">
+                    </div>
+                    <div class="mobile-app-info">
+                        <h3 class="mobile-app-title">Library</h3>
+                        <p class="mobile-app-desc">
+                            A digital library platform for Sabaragamuwa University with department-specific resources and advanced search.
+                        </p>
+                        <div class="mobile-app-actions">
+                            <a href="https://akasha-nadeel.github.io/computing-web/" target="_blank" rel="noopener"
+                                class="btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i> Visit Site
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Website 2: CraveBites -->
+                <div class="mobile-app-card reveal-up delay-200">
+                    <div class="mobile-app-preview web-project-preview">
+                        <img src="products/desktop/food web.png" alt="CraveBites Food Delivery" class="mobile-app-img">
+                    </div>
+                    <div class="mobile-app-info">
+                        <h3 class="mobile-app-title">CraveBites App</h3>
+                        <p class="mobile-app-desc">
+                            A modern food delivery interface with dark-themed UI, dynamic categories, and interactive cart.
+                        </p>
+                        <div class="mobile-app-actions">
+                            <a href="https://crave-bites-new.vercel.app/" target="_blank" rel="noopener"
+                                class="btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i> Visit Site
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Website 3: Travel Web -->
+                <div class="mobile-app-card reveal-up delay-300">
+                    <div class="mobile-app-preview web-project-preview">
+                        <img src="products/desktop/travel web.png" alt="Travel Web" class="mobile-app-img">
+                    </div>
+                    <div class="mobile-app-info">
+                        <h3 class="mobile-app-title">Travel Web</h3>
+                        <p class="mobile-app-desc">
+                            A stunning travel website with elegant layouts, smooth animations, and immersive browsing.
+                        </p>
+                        <div class="mobile-app-actions">
+                            <a href="https://travel-web-new-ten.vercel.app/" target="_blank" rel="noopener"
+                                class="btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i> Visit Site
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Website 4: Agency Web -->
+                <div class="mobile-app-card reveal-up delay-400">
+                    <div class="mobile-app-preview web-project-preview">
+                        <img src="products/desktop/agenc web.png" alt="Agency Web" class="mobile-app-img">
+                    </div>
+                    <div class="mobile-app-info">
+                        <h3 class="mobile-app-title">Agency Web</h3>
+                        <p class="mobile-app-desc">
+                            A sleek company portfolio website with modern design and professional presentation.
+                        </p>
+                        <div class="mobile-app-actions">
+                            <a href="https://company-portfolio-sand-theta.vercel.app/" target="_blank" rel="noopener"
+                                class="btn btn-primary">
+                                <i class="fas fa-external-link-alt"></i> Visit Site
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Projects Section (Bento Grid Redesign) -->
+        <section id="projects" class="mobile-apps-section animate-on-scroll">
+            <h2 class="section-title-custom scroll-move-right">Mobile
+                <span class="title-highlight">Apps</span>
+            </h2>
+            <p class="section-subtitle">Innovative mobile experiences built with Flutter & React Native</p>
+
+            <div class="mobile-apps-grid">
+                <!-- App 1 -->
+                <div class="mobile-app-card reveal-up delay-100">
+                    <div class="mobile-app-preview">
+                        <img src="products/Mobile/Whisk_3e97e7a838f199287b44b88648c553abdr.png" alt="Whisk Culinary App"
+                            class="mobile-app-img">
+                    </div>
+                    <div class="mobile-app-info">
+                        <h3 class="mobile-app-title">Whisk Culinary App</h3>
+                        <p class="mobile-app-desc">A premium cooking companion with recipe discovery, meal planning, and dark-themed UI.</p>
+                        <div class="mobile-app-actions">
+                            <button class="btn btn-primary"
+                                onclick="openModal('products/Mobile/Whisk_3e97e7a838f199287b44b88648c553abdr.png')">View
+                                Design</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- App 2 -->
+                <div class="mobile-app-card reveal-up delay-200">
+                    <div class="mobile-app-preview">
+                        <img src="products/Mobile/Whisk_ce2da3593a682a5a2504a9de7824f0b7dr.png"
+                            alt="Whisk Interactive Cooking" class="mobile-app-img">
+                    </div>
+                    <div class="mobile-app-info">
+                        <h3 class="mobile-app-title">Interactive Guides</h3>
+                        <p class="mobile-app-desc">Interactive cooking guides with voice control and smart grocery lists.</p>
+                        <div class="mobile-app-actions">
+                            <button class="btn btn-primary"
+                                onclick="openModal('products/Mobile/Whisk_ce2da3593a682a5a2504a9de7824f0b7dr.png')">View
+                                Design</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Get In Touch Section -->
+        <section id="contact" class="get-in-touch-section animate-on-scroll">
+            <div class="get-in-touch-content">
+                <h2 class="section-title-custom">Let's <span class="title-highlight">Connect</span>
+                </h2>
+                <p class="get-in-touch-sub">
+                    I'm currently looking for new opportunities. Whether you have a question or just want to say hi,
+                    I'll try my best to get back to you!
+                </p>
+                <a href="#" class="btn btn-primary" onclick="openContactModal(event)"
+                    style="font-size: 1.2rem; padding: 18px 50px;">Say Hello <i class="fas fa-paper-plane"
+                        style="margin-left: 10px;"></i></a>
+            </div>
+        </section>
+
+        <footer class="main-footer">
+            <div class="footer-social">
+                <a href="https://www.facebook.com/share/1HdQDG4MnJ/?mibextid=wwXIfr" target="_blank"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a href="https://github.com/akasha-nadeel" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/akasha-nadeel-381930387?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                    target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p class="copyright">&copy; 2026 Akasha Nadeel. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+
+    <div id="imageModal" class="image-modal">
+        <div class="modal-wrapper">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="img01">
+        </div>
+    </div>
+
+    <!-- Contact Form Modal -->
+    <div id="contactModal" class="contact-modal">
+        <div class="contact-modal-content">
+            <span class="contact-close" onclick="closeContactModal()">&times;</span>
+            <h2 class="contact-title">Get in Touch</h2>
+            <!-- 
+                To enable automatic sending:
+                1. Go to https://formspree.io/ and create a free account.
+                2. Create a form and copy your "Form Endpoint" (URL).
+                3. Paste it inside the action="" quotes below.
+            -->
+            <form class="contact-form" action="https://formspree.io/f/xykkyovd" method="POST">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Custom Confirmation Modal -->
+    <div id="cv-modal" class="custom-modal">
+        <div class="custom-modal-content">
+            <h3>Download CV</h3>
+            <p>You are about to download the official CV of Akasha Nadeel.</p>
+            <p>Do you wish to proceed?</p>
+            <div class="modal-buttons">
+                <button id="confirm-yes" class="btn btn-primary modal-btn">Yes</button>
+                <button id="confirm-no" class="btn btn-secondary modal-btn">No</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Generic Download Confirmation Modal -->
+    <div id="download-modal" class="custom-modal">
+        <div class="custom-modal-content">
+            <h3>Download Assets</h3>
+            <p>You are about to download the assets for this project.</p>
+            <p class="download-filename" style="font-size: 0.9rem; color: #888; margin-bottom: 15px;"></p>
+            <p>Do you wish to proceed?</p>
+            <div class="modal-buttons">
+                <button id="download-yes" class="btn btn-primary modal-btn">Yes</button>
+                <button id="download-no" class="btn btn-secondary modal-btn">No</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Thank You Modal -->
+    <div id="thank-you-modal" class="custom-modal">
+        <div class="custom-modal-content success-content">
+            <div class="success-icon-container">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Message Sent!</h3>
+            <p>Thanks for reaching out! I'll get back to you soon.</p>
+            <button onclick="closeThankYouModal()" class="btn btn-primary modal-btn"
+                style="min-width: 150px;">Awesome</button>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+    <!-- Floating Theme Button (Seperate from Navbar) -->
+    <button id="floating-theme-btn" class="floating-theme-btn" aria-label="Toggle Dark Mode">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Comment Modal (Separate Section) -->
+    <div id="comment-modal" class="modal comment-modal-overlay">
+        <div class="comment-modal-box">
+            <div class="comment-header">
+                <h3 id="comment-project-title">Project Comments</h3>
+                <span class="close-comment-modal">&times;</span>
+            </div>
+            <div class="comment-body" id="comment-list-container" data-lenis-prevent>
+                <div class="no-comments-msg">No comments yet. Be the first to share your thoughts!</div>
+            </div>
+            <div id="comment-error-msg" style="display: none; color: #ff4757; font-size: 0.9rem; padding: 5px 20px;">
+            </div>
+            <div class="comment-footer">
+                <input type="text" id="modal-comment-name" placeholder="Name" style="flex: 0 0 100px;">
+                <input type="text" id="modal-comment-input" placeholder="Write a comment...">
+                <button id="modal-comment-submit"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete Confirmation Modal -->
+    <div id="delete-confirm-modal" class="delete-modal-overlay">
+        <div class="delete-modal-box">
+            <h3>Delete Comment?</h3>
+            <p>Are you sure you want to permanently delete this comment?</p>
+            <div class="delete-modal-actions">
+                <button id="cancel-delete-btn" class="btn-cancel">Cancel</button>
+                <button id="confirm-delete-btn" class="btn-delete">Delete</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
